@@ -1,5 +1,5 @@
 .main-card-overlap{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,8 @@
 }
 
 .cards-overlap{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .section-1{
@@ -26,9 +26,10 @@
     background-color: #FFFFD4;
 }
 
-.main-card-overlap .card{
+.card{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+
     min-height: 100vh;
     max-height: 100vh;
     display: flex;
@@ -38,7 +39,7 @@
     border-radius: 20px;
 }
 
-.main-card-overlap .card h1{
+.card h1{
     font-size: clamp(50px, 8vw, 120px);
     font-family: "Inter";
     color: white;
@@ -68,7 +69,7 @@
 
 .slides {
   position: relative;
-  height: 100vh;
+  height: 100vh!important;
   overflow: hidden;
 }
 

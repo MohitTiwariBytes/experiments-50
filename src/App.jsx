@@ -13,6 +13,7 @@ import Experiment07 from "./Pages/Experiments/Experiment07/Experiment07";
 import Experiment08 from "./Pages/Experiments/Experiment08/Experiment08";
 import Experiment09 from "./Pages/Experiments/Experiment09/Experiment09";
 import Experiment10 from "./Pages/Experiments/Experiment10/Experiment10";
+import Experiment11 from "./Pages/Experiments/Experiment11/Experiment11";
 
 function App() {
   return (
@@ -60,6 +61,10 @@ function App() {
             <Route
               path="/effects/10"
               element={<Experiment10></Experiment10>}
+            ></Route>
+            <Route
+              path="/effects/11"
+              element={<Experiment11></Experiment11>}
             ></Route>
             <Route path="*" element={<Experiment01></Experiment01>}></Route>
           </Routes>

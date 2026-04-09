@@ -66,6 +66,12 @@ const effects = [
       "https://cdn.hackclub.com/019d70e1-5d45-7d3a-884b-18f39c371c2d/image%208%20(2).png",
     link: "/effects/10",
   },
+  {
+    title: "Cards Overlap",
+    image:
+      "https://cdn.hackclub.com/019d70eb-bf08-7945-b82d-14ad42c3e846/Screenshot%202026-04-09%20115422.png",
+    link: "/effects/11",
+  },
 ];
 
 export default function Home() {
