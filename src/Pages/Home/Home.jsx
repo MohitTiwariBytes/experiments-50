@@ -36,6 +36,12 @@ const effects = [
       "https://cdn.hackclub.com/019d70a9-aff1-7bc8-ac24-acdb9a550da1/Group%2060.png",
     link: "/effects/05",
   },
+  {
+    title: "Floating Stickers",
+    image:
+      "https://cdn.hackclub.com/019d70be-21f5-7942-b221-ba8f45965b45/Group%2061.png",
+    link: "/effects/06",
+  },
 ];
 
 export default function Home() {
