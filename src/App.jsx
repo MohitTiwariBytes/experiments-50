@@ -36,6 +36,7 @@ function App() {
               path="/effects/05"
               element={<Experiment05></Experiment05>}
             ></Route>
+            <Route path="*" element={<Experiment01></Experiment01>}></Route>
           </Routes>
         </BrowserRouter>
       </ReactLenis>
