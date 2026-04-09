@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root{
+  width: 100%;
+  height: 100%;
+
+}
+
+.main-experiment {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 20px;
+  padding: 0px 20px;
+}
+
+.left-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+}
+
+.collection-link {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.name-effect {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.name-effect span {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Inter";
+}
+
+.collection-link span {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Inter";
+}
+
+.next,
+.previous {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.grp-bla-bla {
+  display: flex;
+  gap: 5px;
+}
