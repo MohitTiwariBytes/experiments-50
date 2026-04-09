@@ -1,0 +1,98 @@
+import React from "react";
+import "./Experiment10.css";
+import CurveMarquee from "../../../Components/CurveMarquee/CurveMarquee";
+import Grid from "@geist-ui/icons/grid";
+import ArrowRight from "@geist-ui/icons/arrowRight";
+import ArrowLeft from "@geist-ui/icons/arrowLeft";
+
+export default function Experiment10() {
+  const MAX = 15;
+  const name = "Curved Marquee";
+
+  const navigate = (dir) => {
+    const parts = window.location.pathname.split("/");
+    const num = parseInt(parts[parts.length - 1]);
+    if (!isNaN(num)) {
+      let next = num + dir;
+      if (next > MAX) next = 1;
+      if (next < 1) next = MAX;
+      parts[parts.length - 1] = String(next).padStart(2, "0");
+      window.location.href = parts.join("/");
+    }
+  };
+
+  return (
+    <div className="main-experiment">
+      <div className="controls">
+        <div className="left-controls">
+          <div
+            onClick={() => {
+              window.location.replace("/");
+            }}
+            className="collection-link"
+          >
+            <span>
+              <Grid size={20}></Grid> All Experiments
+            </span>
+          </div>
+          <div className="grp-bla-bla">
+            <div className="next" onClick={() => navigate(-1)}>
+              <ArrowLeft></ArrowLeft>
+            </div>
+            <div className="previous" onClick={() => navigate(1)}>
+              <ArrowRight></ArrowRight>
+            </div>
+          </div>
+        </div>
+        <div className="right-controls">
+          <div className="name-effect">
+            <span>{name}</span>
+          </div>
+        </div>
+      </div>
+      <CurveMarquee
+        gap={20}
+        baseSpeed={100}
+        baseDirection="right"
+        curveBend={1000}
+      >
+        <img
+          id="images-marquee"
+          style={{
+            borderRadius: "20px",
+            objectFit: "cover",
+          }}
+          src="https://cdn.cosmos.so/c90dd53e-a03b-4207-ba72-313976fb88aa"
+          alt=""
+        />
+        <img
+          id="images-marquee"
+          style={{
+            borderRadius: "20px",
+            objectFit: "cover",
+          }}
+          src="https://cdn.cosmos.so/cf829015-a9f5-443e-83fc-82d7267ce0eb"
+          alt=""
+        />
+        <img
+          id="images-marquee"
+          style={{
+            borderRadius: "20px",
+            objectFit: "cover",
+          }}
+          src="https://cdn.cosmos.so/496a5af9-4d92-421f-9ae4-6d11f3cec483"
+          alt=""
+        />
+        <img
+          id="images-marquee"
+          style={{
+            borderRadius: "20px",
+            objectFit: "cover",
+          }}
+          src="https://cdn.cosmos.so/e182082a-3b64-445d-ab2d-1f9547cb1e58"
+          alt=""
+        />
+      </CurveMarquee>
+    </div>
+  );
+}

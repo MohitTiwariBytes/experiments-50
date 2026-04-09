@@ -54,6 +54,18 @@ const effects = [
       "https://cdn.hackclub.com/019d70d3-c8e9-7b12-9515-4ef1f98a3545/Group%2064.png",
     link: "/effects/08",
   },
+  {
+    title: "Floating Menu",
+    image:
+      "https://cdn.hackclub.com/019d70db-5f8a-7e80-be91-6b0352647888/Screenshot%202026-04-09%20113630.png",
+    link: "/effects/09",
+  },
+  {
+    title: "Curved Marquee",
+    image:
+      "https://cdn.hackclub.com/019d70e1-5d45-7d3a-884b-18f39c371c2d/image%208%20(2).png",
+    link: "/effects/10",
+  },
 ];
 
 export default function Home() {
