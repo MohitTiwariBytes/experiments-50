@@ -1,0 +1,231 @@
+.main-nav-05 {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 100vh;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: end;
+  align-items: space-between;
+  z-index: 1;
+  background-color: #ff4d00;
+  border-radius: 10px;
+}
+
+.main-navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: start;
+  align-items: start;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+
+.main-navigation a {
+  font-size: clamp(60px, 10vw, 120px);
+  font-family: "Inter";
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  transition: all 0.4s cubic-bezier(0.825, 0.08, 0.04, 1);
+white-space: nowrap;
+}
+
+.links-social {
+  margin-bottom: 50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.links-social a {
+  font-size: clamp(18px, 2vw, 20px);
+  font-family: "Inter";
+  letter-spacing: -0.01em;
+  color: white;
+  text-underline-offset: 3px;
+  width: fit-content;
+}
+
+.link-grp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  max-width: none;
+  height: fit-content;
+}
+
+.link-grp svg {
+  height: 50%;
+  width: 50%;
+  color: white;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.825, 0.08, 0.04, 1);
+  transform: translateX(-10px);
+}
+
+.link-grp:hover svg {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.nav-05 {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  border: 1px solid #d4d4d4;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+.logo-left {
+  margin-top: 5px;
+}
+
+.btn-grp {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-grp button {
+  padding: 10px 14px 10px 14px;
+  font-size: 20px;
+  font-family: "Inter";
+  letter-spacing: -0.02em;
+  font-weight: 550;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+#btn-primary {
+  background-color: #ff4d00;
+  border: 1px solid black;
+  box-shadow: 0px 2px 0px 0px black;
+}
+#btn-secondary {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(146, 146, 146);
+  box-shadow: 0px 2px 0px 0px rgb(146, 146, 146);
+  color: black;
+}
+
+#btn-primary:hover {
+  box-shadow: 0px 3px 0px 0px black;
+  transform: translateY(-1px);
+}
+#btn-primary:active {
+  box-shadow: 0px 1px 0px 0px black;
+  transform: translateY(1px);
+}
+#btn-secondary:hover {
+  box-shadow: 0px 3px 0px 0px rgb(146, 146, 146);
+  transform: translateY(-1px);
+}
+#btn-secondary:active {
+  box-shadow: 0px 1px 0px 0px rgb(146, 146, 146);
+  transform: translateY(1px);
+}
+
+.right-grp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-btn {
+  cursor: pointer;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.line {
+  width: 95%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.4s cubic-bezier(0.825, 0.08, 0.04, 1);
+}
+
+.menu-btn.open .line:nth-child(1) {
+  rotate: -45deg;
+}
+.menu-btn.open .line:nth-child(2) {
+  rotate: 45deg;
+  margin-top: -30%;
+}
+
+@media (max-width: 726px) {
+  .main-nav-05 {
+    margin-top: 20px;
+  }
+
+  .nav-05 {
+    width: calc(100% - 40px);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 538px) {
+  #btn-secondary {
+    display: none;
+  }
+
+  .main-navigation {
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+  .links-social {
+    margin-bottom: 30px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 200px;
+  }
+}
+@media (max-width: 440px) {
+  #btn-primary {
+    display: none;
+  }
+}
+
+

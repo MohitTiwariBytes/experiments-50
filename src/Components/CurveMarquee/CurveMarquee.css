@@ -1,0 +1,20 @@
+/* ── CurveMarquee.css ─────────────────────────────────── */
+
+.main-curve-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    pointer-events: none;
+}
+
+.curve-marquee-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    transform-origin: center center;
+    overflow-x: hidden;
+}

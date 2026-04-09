@@ -3,7 +3,7 @@ import * as THREE from "three";
 
 export default function DissolveTextScaled({
   text = "DISSOLVE",
-  fontSize = 200,
+  fontSize = "15vw",
   fontFamily = "sans-serif",
   fontWeight = "bold",
   fontColor = "black",

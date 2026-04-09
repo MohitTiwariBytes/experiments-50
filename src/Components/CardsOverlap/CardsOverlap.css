@@ -1,0 +1,120 @@
+.main-card-overlap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #FFFFD4;
+    
+}
+
+.cards-overlap{
+    width: 100%;
+    height: 100%;
+}
+
+.section-1{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFD4;
+}
+
+.main-card-overlap .card{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.main-card-overlap .card h1{
+    font-size: clamp(50px, 8vw, 120px);
+    font-family: "Inter";
+    color: white;
+}
+
+.text{
+    padding: 15px 30px;
+    background-color: #DA4242;
+    border-radius: 10px;
+    border: 2px solid #FFFFD4;
+}
+
+.text h1 {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.04em;
+    color: #FFFFD4;
+    font-size: clamp(50px, 8vw, 120px);
+}
+
+
+.slides-wrapper {
+  position: relative;
+  background-color: #FFFFD4;
+}
+
+.slides {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card:first-child {
+    transform: translateX(0);
+    background-color: #DA4242;
+    border-radius: 0px;
+}
+
+.card:not(:first-child):nth-child(odd) {
+    transform: translateX(-150%) translateY(10%) rotate(-5deg);
+    background-color: #DA4242;
+}
+
+.card:not(:first-child):nth-child(even) {
+    transform: translateX(150%) translateY(10%) rotate(5deg);
+    background-color: #0D8DFF;
+}
+
+.section-2{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFD4;
+    color: black;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-2 h1{
+    max-width: 700px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-size: clamp(50px, 8vw, 120px);
+    font-family: "Inter";
+}
+
+.section-2 span{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    opacity: 0.5;
+    font-size: clamp(20px, 2vw, 40px);
+    font-family: "Inter";
+}

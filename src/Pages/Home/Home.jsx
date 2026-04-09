@@ -19,9 +19,9 @@ const effects = [
     link: "/effects/02",
   },
   {
-    title: "Fluid Morph",
+    title: "Liquid Ascii",
     image:
-      "https://cdn.hackclub.com/019d7042-7cc6-7585-8d63-7f66b63b994c/PixelDistort.png",
+      "https://cdn.hackclub.com/019d708c-8759-7b66-bd2c-9664b000ebcf/Group%2059.png",
     link: "/effects/03",
   },
 ];

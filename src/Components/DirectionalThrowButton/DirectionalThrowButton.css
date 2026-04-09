@@ -1,0 +1,42 @@
+.main-directional-throw-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+#btn-directional{
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #DA4242;
+    border-radius: 5px;
+    border: 2px solid #7D0303;
+    cursor: pointer;
+}
+
+#btn-directional span{
+    font-size: 30px;
+    font-family: "Inter";
+    color: white;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+}
+
+.text-duplicate{
+    position: absolute;
+    top: 200%;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #7D0303;
+}
+.primary-txt{
+    position: relative;
+}
