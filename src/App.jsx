@@ -6,8 +6,8 @@ import ReactLenis from "lenis/react";
 import Experiment01 from "./Pages/Experiments/Experiment01/Experiment01";
 import Experiment02 from "./Pages/Experiments/Experiment02/Experiment02";
 import Experiment03 from "./Pages/Experiments/Experiment03/Experiment03";
-// import Experiment04 from "./Pages/Experiments/Experiment04/Experiment04";
-// import Experiment05 from "./Pages/Experiments/Experiment05/Experiment05";
+import Experiment04 from "./Pages/Experiments/Experiment04/Experiment04";
+import Experiment05 from "./Pages/Experiments/Experiment05/Experiment05";
 
 function App() {
   return (
@@ -28,14 +28,14 @@ function App() {
               path="/effects/03"
               element={<Experiment03></Experiment03>}
             ></Route>
-            {/* <Route
+            <Route
               path="/effects/04"
               element={<Experiment04></Experiment04>}
-            ></Route> */}
-            {/* <Route
+            ></Route>
+            <Route
               path="/effects/05"
               element={<Experiment05></Experiment05>}
-            ></Route> */}
+            ></Route>
           </Routes>
         </BrowserRouter>
       </ReactLenis>

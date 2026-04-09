@@ -1,0 +1,59 @@
+import React from "react";
+import "./Experiment04.css";
+import VideoPlayOnScroll from "../../../Components/VideoPlayOnScroll/VideoPlayOnScroll";
+import Grid from "@geist-ui/icons/grid";
+import ArrowRight from "@geist-ui/icons/arrowRight";
+import ArrowLeft from "@geist-ui/icons/arrowLeft";
+
+export default function Experiment04() {
+  const MAX = 15;
+  const name = "Video Scrub";
+
+  const navigate = (dir) => {
+    const parts = window.location.pathname.split("/");
+    const num = parseInt(parts[parts.length - 1]);
+    if (!isNaN(num)) {
+      let next = num + dir;
+      if (next > MAX) next = 1;
+      if (next < 1) next = MAX;
+      parts[parts.length - 1] = String(next).padStart(2, "0");
+      window.location.href = parts.join("/");
+    }
+  };
+
+  return (
+    <>
+      <div className="main-experiment fourth">
+        <div className="controls">
+          <div className="left-controls">
+            <div
+              onClick={() => {
+                window.location.replace("/");
+              }}
+              className="collection-link"
+            >
+              <span>
+                <Grid size={20}></Grid> All Experiments
+              </span>
+            </div>
+            <div className="grp-bla-bla">
+              <div className="next" onClick={() => navigate(-1)}>
+                <ArrowLeft></ArrowLeft>
+              </div>
+              <div className="previous" onClick={() => navigate(1)}>
+                <ArrowRight></ArrowRight>
+              </div>
+            </div>
+          </div>
+          <div className="right-controls">
+            <div className="name-effect">
+              <span>{name}</span>
+            </div>
+          </div>
+        </div>
+
+        <VideoPlayOnScroll></VideoPlayOnScroll>
+      </div>
+    </>
+  );
+}

@@ -15,6 +15,10 @@ html, body, #root{
 .main-experiment {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .controls {
@@ -26,6 +30,7 @@ html, body, #root{
   position: fixed;
   bottom: 20px;
   padding: 0px 20px;
+  z-index: 1000000;
 }
 
 .left-controls {
@@ -93,4 +98,9 @@ html, body, #root{
 .grp-bla-bla {
   display: flex;
   gap: 5px;
+}
+
+.seasid{
+  width: 100%;
+  height: 100vh;
 }

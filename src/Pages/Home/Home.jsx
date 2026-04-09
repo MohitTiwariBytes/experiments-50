@@ -24,6 +24,18 @@ const effects = [
       "https://cdn.hackclub.com/019d708c-8759-7b66-bd2c-9664b000ebcf/Group%2059.png",
     link: "/effects/03",
   },
+  {
+    title: "Video Play On Scroll",
+    image:
+      "https://cdn.hackclub.com/019d70a5-e41b-7709-a18a-b914619966a4/image%204.png",
+    link: "/effects/04",
+  },
+  {
+    title: "Image Trail",
+    image:
+      "https://cdn.hackclub.com/019d70a9-aff1-7bc8-ac24-acdb9a550da1/Group%2060.png",
+    link: "/effects/05",
+  },
 ];
 
 export default function Home() {

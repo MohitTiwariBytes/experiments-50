@@ -3,7 +3,14 @@ import gsap from "gsap";
 import "./ImageTrail.css";
 
 export default function ImageTrail({
-  images,
+  images = [
+    "https://cdn.cosmos.so/96b0b29e-739b-41c3-9135-056a960025f6?format=jpeg",
+    "https://cdn.cosmos.so/dedc89c0-a979-46ba-8ede-83dd50aacf5d?format=jpeg",
+    "https://cdn.cosmos.so/ab8e68a5-a7aa-4915-a5f1-23eb300ec371?format=jpeg",
+    "https://cdn.cosmos.so/ac66f728-0b0a-4411-b0e9-106004da6a2c?format=jpeg",
+    "https://cdn.cosmos.so/c7505fec-58af-4a3b-add3-5968947562fe?format=jpeg",
+    "https://cdn.cosmos.so/fcaf7573-cfd4-4604-b114-78b92b611182?format=jpeg",
+  ],
   maxTrailLength = 15,
   className,
   velocity = 16,
@@ -208,6 +215,8 @@ export default function ImageTrail({
   }, [active]);
 
   return (
-    <div className={`main-image-trail ${className}`} ref={containerRef}></div>
+    <div className={`main-image-trail ${className}`} ref={containerRef}>
+      <span>Move Your Mouse!</span>
+    </div>
   );
 }
