@@ -6,7 +6,7 @@ import ArrowRight from "@geist-ui/icons/arrowRight";
 import ArrowLeft from "@geist-ui/icons/arrowLeft";
 
 export default function Experiment06() {
-  const MAX = 15;
+  const MAX = 11;
   const name = "Pixel Distort";
 
   const navigate = (dir) => {

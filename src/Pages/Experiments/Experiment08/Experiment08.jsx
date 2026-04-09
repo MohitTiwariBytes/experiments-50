@@ -6,7 +6,7 @@ import ArrowLeft from "@geist-ui/icons/arrowLeft";
 import ParallaxDepthImage from "../../../Components/Image3dMap/Image3dMap";
 
 export default function Experiment08() {
-  const MAX = 15;
+  const MAX = 11;
   const name = "3D Image Depth Effect";
 
   const navigate = (dir) => {

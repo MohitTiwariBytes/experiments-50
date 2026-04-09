@@ -6,7 +6,7 @@ import ArrowRight from "@geist-ui/icons/arrowRight";
 import ArrowLeft from "@geist-ui/icons/arrowLeft";
 
 export default function Experiment11() {
-  const MAX = 15;
+  const MAX = 11;
   const name = "Cards Overlap";
 
   const navigate = (dir) => {

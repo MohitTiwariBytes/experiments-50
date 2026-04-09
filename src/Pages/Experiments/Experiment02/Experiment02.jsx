@@ -6,7 +6,7 @@ import ArrowLeft from "@geist-ui/icons/arrowLeft";
 import DissolveTextScaled from "../../../Components/DissolveText/DissolveText";
 
 export default function Experiment02() {
-  const MAX = 15;
+  const MAX = 11;
   const name = "Dissolve Text";
 
   const navigate = (dir) => {
