@@ -160,7 +160,7 @@ const FIT_MAP = { cover: 0, contain: 1, fill: 2, none: 2 };
   style        – optional style on the wrapper div
  */
 export default function ParallaxDepthImage({
-  src,
+  src = "https://cdn.cosmos.so/7e1a4d0d-ad3a-4030-bd93-bfa10a1bc1d9",
   width = 800,
   height = 950,
   objectFit = "cover",
