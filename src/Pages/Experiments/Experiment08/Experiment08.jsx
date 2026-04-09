@@ -1,13 +1,13 @@
 import React from "react";
-import "./Experiment01.css";
-import PixelDistort from "../../../Components/TextPixelDistort/PixelDistort";
+import "./Experiment08.css";
 import Grid from "@geist-ui/icons/grid";
 import ArrowRight from "@geist-ui/icons/arrowRight";
 import ArrowLeft from "@geist-ui/icons/arrowLeft";
+import ParallaxDepthImage from "../../../Components/Image3dMap/Image3dMap";
 
-export default function Experiment01() {
+export default function Experiment08() {
   const MAX = 15;
-  const name = "Pixel Distort";
+  const name = "3D Image Depth Effect";
 
   const navigate = (dir) => {
     const parts = window.location.pathname.split("/");
@@ -51,7 +51,7 @@ export default function Experiment01() {
         </div>
       </div>
 
-      <PixelDistort></PixelDistort>
+      <ParallaxDepthImage></ParallaxDepthImage>
     </div>
   );
 }

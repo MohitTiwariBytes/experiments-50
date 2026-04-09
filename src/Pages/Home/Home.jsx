@@ -48,6 +48,12 @@ const effects = [
       "https://cdn.hackclub.com/019d70c5-f44f-7661-b506-5f7d58f3025e/Group%2063.png",
     link: "/effects/07",
   },
+  {
+    title: "3D Image (Depth Effect)",
+    image:
+      "https://cdn.hackclub.com/019d70d3-c8e9-7b12-9515-4ef1f98a3545/Group%2064.png",
+    link: "/effects/08",
+  },
 ];
 
 export default function Home() {

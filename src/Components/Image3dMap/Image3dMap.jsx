@@ -20,31 +20,24 @@ const FRAGMENT_SHADER = `
   varying vec2 vUv;
 
   vec2 coverUV(vec2 uv, vec2 imgSize, vec2 canvasSize) {
-    // Scale so the image fills the canvas, cropping the shorter axis
     float canvasRatio = canvasSize.x / canvasSize.y;
     float imageRatio  = imgSize.x / imgSize.y;
     vec2 scale;
     if (canvasRatio > imageRatio) {
-      // canvas is wider than image — fit width, crop height
       scale = vec2(1.0, canvasRatio / imageRatio);
     } else {
-      // canvas is taller than image — fit height, crop width
       scale = vec2(imageRatio / canvasRatio, 1.0);
     }
-    // Multiply maps UV [0,1] outward so the texture is zoomed in (cropped)
     return (uv - 0.5) * scale + 0.5;
   }
 
   vec2 containUV(vec2 uv, vec2 imgSize, vec2 canvasSize) {
-    // Scale so the entire image fits, leaving letterbox/pillarbox
     float canvasRatio = canvasSize.x / canvasSize.y;
     float imageRatio  = imgSize.x / imgSize.y;
     vec2 scale;
     if (canvasRatio > imageRatio) {
-      // canvas is wider — fit height, pillarbox sides
       scale = vec2(imageRatio / canvasRatio, 1.0);
     } else {
-      // canvas is taller — fit width, letterbox top/bottom
       scale = vec2(1.0, canvasRatio / imageRatio);
     }
     return (uv - 0.5) * scale + 0.5;
@@ -52,8 +45,21 @@ const FRAGMENT_SHADER = `
 
   void main() {
     vec2 uv;
+    vec2 uvMin = vec2(0.0);
+    vec2 uvMax = vec2(1.0);
+
     if (uFit == 0) {
       uv = coverUV(vUv, uImageSize, uResolution);
+      float canvasRatio = uResolution.x / uResolution.y;
+      float imageRatio  = uImageSize.x / uImageSize.y;
+      vec2 scale;
+      if (canvasRatio > imageRatio) {
+        scale = vec2(1.0, canvasRatio / imageRatio);
+      } else {
+        scale = vec2(imageRatio / canvasRatio, 1.0);
+      }
+      uvMin = (vec2(0.0) - 0.5) * scale + 0.5;
+      uvMax = (vec2(1.0) - 0.5) * scale + 0.5;
     } else if (uFit == 1) {
       uv = containUV(vUv, uImageSize, uResolution);
     } else {
@@ -62,12 +68,13 @@ const FRAGMENT_SHADER = `
 
     float depth = texture2D(uDepth, uv).r;
     vec2 displaced = uv + uMouse * depth * uStrength;
+    displaced = clamp(displaced, uvMin, uvMax);
     gl_FragColor = texture2D(uImage, displaced);
   }
 `;
 
 function generateDepthMap(img) {
-  const SIZE = 512;
+  const SIZE = 812;
   const canvas = document.createElement("canvas");
   canvas.width = SIZE;
   canvas.height = SIZE;
@@ -89,7 +96,6 @@ function generateDepthMap(img) {
   const tmp = new Float32Array(SIZE * SIZE);
   const out = new Float32Array(SIZE * SIZE);
 
-  // horizontal blur
   for (let y = 0; y < SIZE; y++) {
     for (let x = 0; x < SIZE; x++) {
       let sum = 0,
@@ -104,7 +110,6 @@ function generateDepthMap(img) {
     }
   }
 
-  // vertical blur
   for (let y = 0; y < SIZE; y++) {
     for (let x = 0; x < SIZE; x++) {
       let sum = 0,
@@ -149,20 +154,10 @@ function generateDepthMap(img) {
 
 const FIT_MAP = { cover: 0, contain: 1, fill: 2, none: 2 };
 
-/**
- props:
-  src          – image URL (obviously)
-  width        – canvas width in px  (default = 800)
-  height       – canvas height in px (default = 450)
-  objectFit    – "cover" or "contain" or "fill" or "none"  (default: "cover")
-  strength     – parallax strength 0.0–0.1  (default: 0.03)
-  className    – optional class on the wrapper div
-  style        – optional style on the wrapper div
- */
 export default function ParallaxDepthImage({
-  src = "https://cdn.cosmos.so/7e1a4d0d-ad3a-4030-bd93-bfa10a1bc1d9",
+  src = "https://cdn.cosmos.so/ac078b89-d888-4f69-9374-1c1db3d0d9aa",
   width = 800,
-  height = 950,
+  height = 850,
   objectFit = "cover",
   strength = 0.03,
   className,
