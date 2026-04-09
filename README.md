@@ -14,7 +14,7 @@ please please pleasee view each experiment individually before voting, The landi
 
 ## Structure
 
-Each experiment lives at `/effect/[number]` — use the arrow controls inside any experiment to move between them.
+Each experiment lives at `/effect/[number]` - use the arrow controls inside any experiment to move between them!
 
 ## Running locally
 
