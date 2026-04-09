@@ -42,6 +42,12 @@ const effects = [
       "https://cdn.hackclub.com/019d70be-21f5-7942-b221-ba8f45965b45/Group%2061.png",
     link: "/effects/06",
   },
+  {
+    title: "Slanted Button",
+    image:
+      "https://cdn.hackclub.com/019d70c5-f44f-7661-b506-5f7d58f3025e/Group%2063.png",
+    link: "/effects/07",
+  },
 ];
 
 export default function Home() {

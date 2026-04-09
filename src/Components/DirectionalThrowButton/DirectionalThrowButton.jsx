@@ -22,16 +22,14 @@ export default function DirectionalThrowButton({ text = "Hover me!" }) {
     gsap.to(duplicateTxtRef.current, {
       rotate: 0,
       top: 0,
-      opacity: 1,
       ease: "smoothEase",
-      duration: 0.4,
+      duration: 4,
     });
     gsap.to(primaryTextRef.current, {
       rotate: "-20",
-      opacity: 0,
       y: "-200%",
       ease: "smoothEase",
-      duration: 0.4,
+      duration: 4,
     });
   };
   const handleMouseOut = () => {
@@ -39,15 +37,13 @@ export default function DirectionalThrowButton({ text = "Hover me!" }) {
       rotate: 20,
       top: "200%",
       ease: "smoothEase",
-      duration: 0.4,
-      opacity: 0,
+      duration: 4,
     });
     gsap.to(primaryTextRef.current, {
       rotate: 0,
       y: 0,
       ease: "smoothEase",
-      duration: 0.4,
-      opacity: 1,
+      duration: 4,
     });
   };
 
