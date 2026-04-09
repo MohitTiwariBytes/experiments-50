@@ -31,7 +31,7 @@ export default function DirectionalThrowButton({ text = "Hover me!" }) {
       opacity: 0,
       y: "-200%",
       ease: "smoothEase",
-      duration: 4,
+      duration: 0.4,
     });
   };
   const handleMouseOut = () => {
